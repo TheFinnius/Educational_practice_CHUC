@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionBD.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
