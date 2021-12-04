@@ -27,5 +27,15 @@ namespace Educational_practice_CHUC
             return connString;
 
         }
+
+        internal static void Open()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static object Close()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
