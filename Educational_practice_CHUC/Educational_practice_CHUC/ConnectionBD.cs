@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Educational_practice_CHUC
 {
-    internal class ConnectionBD
+    public class ConnectionBD
     {
         public string ConnectBDPRO = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass;";
 

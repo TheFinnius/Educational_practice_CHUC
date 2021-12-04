@@ -19,4 +19,13 @@ namespace Educational_practice_CHUC
             Application.Run(new Menu());
         }
     }
+    public class ConnectBDPRO
+    {
+        public static string ConnectBD()
+        {
+            string connString = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass";
+            return connString;
+
+        }
+    }
 }
