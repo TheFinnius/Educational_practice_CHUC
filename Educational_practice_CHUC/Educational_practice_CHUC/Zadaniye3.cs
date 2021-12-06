@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // Добавлено для работы некоторых элементов кода
 
 namespace Educational_practice_CHUC
 {
@@ -17,13 +17,13 @@ namespace Educational_practice_CHUC
         {
             InitializeComponent();
         }
-        private void Zadaniye3_Load(object sender, EventArgs e)
+        private void Zadaniye3_Load(object sender, EventArgs e) // Создание метода
         {
             MySqlConnection conn = new MySqlConnection(ConnectBDPRO.ConnectBD());
             string sql = $"SELECT id, fio, theme_kurs FROM t_stud";
             try
             {
-                conn.Open();
+                conn.Open(); // Подключение открыто (connect to data base)
                 MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, conn);
                 DataSet dataset = new DataSet();
                 IDataAdapter.Fill(dataset);
@@ -31,12 +31,12 @@ namespace Educational_practice_CHUC
             }
             finally
             {
-                conn.Close();
+                conn.Close(); // Подключение закрыто (close connect to data base)
             }
         }
         string id_rows = "0";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { // Создание условия для дата грида (вывод информации)
             dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
             dataGridView1.CurrentRow.Selected = true;
             string index_rows;

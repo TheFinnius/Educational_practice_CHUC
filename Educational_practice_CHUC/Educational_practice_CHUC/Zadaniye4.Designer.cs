@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(422, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Zadaniye4";
-            this.Text = "Zadaniye4";
+            this.Text = "Задание 4";
             this.Load += new System.EventHandler(this.Zadaniye4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

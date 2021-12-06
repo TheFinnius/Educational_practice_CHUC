@@ -22,6 +22,7 @@ namespace Educational_practice_CHUC
 
         }
 
+        // Создаём кнопки для открытия новых форм с заданиями
         private void button1_Click(object sender, EventArgs e)
         {
             Zadaniye1 Zadaniye1 = new Zadaniye1();

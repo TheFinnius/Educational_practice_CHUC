@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // Для работы некоторых элементов кода
 
 namespace Educational_practice_CHUC
 {
@@ -18,7 +18,7 @@ namespace Educational_practice_CHUC
             InitializeComponent();
         }
 
-        class Connection_Proverka
+        class Connection_Proverka // Создание класса для подключения к базе
         {
             public string ConnectBDPRO = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass;";
 
@@ -27,11 +27,11 @@ namespace Educational_practice_CHUC
                 MessageBox.Show(ConnectBDPRO);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Создание кнопки
         {
-            Connection_Proverka con = new Connection_Proverka();
+            Connection_Proverka con = new Connection_Proverka(); 
             MySqlConnection conn = new MySqlConnection(con.ConnectBDPRO);
-            bool result = true;
+            bool result = true; // Создание условия для вывода диалоговых сообщений
             try
             {
                 conn.Open();
@@ -42,7 +42,7 @@ namespace Educational_practice_CHUC
             }
             finally
             {
-                if (result == true)
+                if (result == true) 
                 {
                     MessageBox.Show("Подключение работает без неполадков");
                 }
